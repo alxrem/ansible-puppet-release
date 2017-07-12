@@ -1,0 +1,9 @@
+---
+- name: Check whether release package is installed
+  command: dpkg-query -f '${Package} ${Status}' -W puppet-release
+  register: release_package
+  failed_when: release_package.rc > 1
+  changed_when: not release_package.stdout.startswith("puppet-release install ")
+  notify: Install package
+
+- meta: flush_handlers

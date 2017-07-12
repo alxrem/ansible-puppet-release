@@ -1,0 +1,2 @@
+---
+release_pkg: puppet-release-{{ ansible_distribution_release }}.deb

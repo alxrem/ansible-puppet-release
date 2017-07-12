@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+  - shell: grep '^deb http://apt\.puppetlabs\.com trusty puppet$' /etc/apt/sources.list.d/puppet.list
+    when: ansible_distribution_release == 'trusty'
+  - shell: grep '^deb http://apt\.puppetlabs\.com xenial puppet$' /etc/apt/sources.list.d/puppet.list
+    when: ansible_distribution_release == 'xenial'
+  - shell: grep '^deb http://apt\.puppetlabs\.com wheezy puppet$' /etc/apt/sources.list.d/puppet.list
+    when: ansible_distribution_release == 'wheezy'
+  - shell: grep '^deb http://apt\.puppetlabs\.com jessie puppet$' /etc/apt/sources.list.d/puppet.list
+    when: ansible_distribution_release == 'jessie'
