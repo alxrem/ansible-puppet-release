@@ -1,6 +1,5 @@
 ---
 - hosts: all
   gather_facts: yes
-  become: yes
   roles:
-  - ansible-puppet-release
+  - alxrem.puppet-release
