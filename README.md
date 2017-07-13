@@ -1,5 +1,3 @@
-[![Ansible Galaxy](https://img.shields.io/ansible/role/6371.svg)](https://galaxy.ansible.com/detail#/role/6371)
-
 puppet-release
 ==============
 
